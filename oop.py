@@ -6,15 +6,19 @@ class pizza:
     cheese_type = ""
 
     def __init__(self, toppings, crust_type, sauce_type, cheese_type):
-        toppings = toppings
-        crust_type = crust_type
-        sauce_type = sauce_type
-        cheese_type = cheese_type
-    def get_pizza(self):
+        self.toppings = toppings
+        self.crust_type = crust_type
+        self.sauce_type = sauce_type
+        self.cheese_type = cheese_type
+    def get_toppings(self):
         return self.toppings
-        return self.crust_type
-        return self.sauce_type
+    def get_cheese(self):
         return self.cheese_type
+    def get_crust(self):
+        return self.crust_type
+    def get_sauce(self):;
+        return self.sauce_type
+        
      
 crusts = ["white crust", "White Crust", "Wheat Crust", "wheat crust"]
 cheeses = ["American Cheese", "american cheese", "American cheese", "Russian Cheese", "russian cheese", "Russian cheese"]
@@ -39,7 +43,7 @@ if crust in crusts:
         print("Do you want Pesto Sauce or Tomato Sauce?")
         sauce = input("Please enter the sauce you want for the pizza:  ")
         while sauce not in sauces:
-            cheese = input("Please type one of the choices: ")
+            sauce = input("Please type one of the choices: ")
             continue
         if sauce in sauces:
           print("Please pick the toppings you want for the pizza!")
@@ -50,7 +54,10 @@ if crust in crusts:
           if top in toppings:
               pizza1 = pizza(top, crust, sauce, cheese)
               print("Great job! Here is your pizza!")
-              print(pizza1.get_pizza())
+              print(pizza1.get_toppings())
+              print(pizza1.get_cheese())
+              print(pizza1.get_sauce())
+              print(pizza1.get_crust())
            
                
         
