@@ -16,7 +16,7 @@ class pizza:
         return self.cheese_type
     def get_crust(self):
         return self.crust_type
-    def get_sauce(self):;
+    def get_sauce(self):
         return self.sauce_type
         
      
@@ -28,40 +28,15 @@ print("Welcome to create your own pizza!")
 print("Please pick a type of crust you want for your pizza and make sure it is one of the choices!")
 print("Do you want White Crust or Wheat Crust?")
 crust = input("Please enter the crust you want for your pizza: ")
-while crust not in crusts:
-    crust = input("Please type one of the choices: ")
-    continue 
-if crust in crusts:
-    print("Please pick the cheese you want for the pizza!")
-    print("Do you want American Cheese or Russian Cheese?")
-    cheese = input("Please enter the cheese you want for the pizza:  ")
-    while cheese not in cheeses:
-        cheese = input("Please type one of the choices: ")
-        continue
-    if cheese in cheeses:
-        print("Please pick a sauce you want for the pizza!")
-        print("Do you want Pesto Sauce or Tomato Sauce?")
-        sauce = input("Please enter the sauce you want for the pizza:  ")
-        while sauce not in sauces:
-            sauce = input("Please type one of the choices: ")
-            continue
-        if sauce in sauces:
-          print("Please pick the toppings you want for the pizza!")
-          print("Do you want Pepperoni, Mushrooms, Jalepeno or no toppings?")
-          top = input("Please enter the toppings you want for the pizza:  ")
-          while top not in toppings:
-             top = input("Please type one of the choices: ")
-          if top in toppings:
-              pizza1 = pizza(top, crust, sauce, cheese)
-              print("Great job! Here is your pizza!")
-              print(pizza1.get_toppings())
-              print(pizza1.get_cheese())
-              print(pizza1.get_sauce())
-              print(pizza1.get_crust())
-           
-               
-        
-    
+cheese = input("Please enter the cheese you want for the pizza:  ")
+sauce = input("Please enter the sauce you want for the pizza:  ")
+top = input("Please enter the toppings you want for the pizza:  ")
 
-    
+pizza1 = pizza(top, crust, sauce, cheese)
+print("Great job! Here is your pizza!")
+print(pizza1.get_toppings())
+print(pizza1.get_cheese())
+print(pizza1.get_sauce())
+print(pizza1.get_crust())
+
 
